@@ -57,7 +57,7 @@ export default {
                         }
                         var allowNum = res.data.Num
                         if(res.data.Num==-1){
-                            allowNum="99+"
+                            allowNum=99
                         }
                         var tmp2 = {name:tmp4.name,url:tmp4.url,allow:allowNum,status:res.data.isAllow}
                         self.nodeList.push(tmp2)
@@ -80,16 +80,19 @@ export default {
         },
         //选择最优节点
         selectMinNode(){
-            var tmp = this.nodeList
-            //开始遍历
-            var Mnum = 0
-            var id = 0
-            for(var i=0;i<tmp;i++){
-                if(tmp[i].allow>Mnum){
-                    id = i
+            if(this.nodeList.length==global.urlList.length){
+                var tmp = this.nodeList
+                //开始遍历
+                var Mnum = 0
+                var id = 0
+                for(var i=0;i<tmp;i++){
+                    if(tmp[i].allow>Mnum){
+                        id = i
+                    }
                 }
+                this.changeNode(id)
             }
-            this.changeNode(id)
+            
         },
         checkNodeAllow(id){
             if(this.nodeList != 0){
