@@ -10,9 +10,10 @@
   </div>
 </div>
 <div class="mdui-dialog" id="assgnment">
-    <div class="mdui-dialog-content">{{notice}}</div>
-    <div class="mdui-dialog-actions">
-      <button class="mdui-btn mdui-ripple" mdui-dialog-close>了解</button>
+    <div class="mdui-dialog-content">
+      {{notice}}
+      <hr/>
+      <div class="more-meta mdui-typo"><span>BY HuaYu</span><span style="float:right;"><a href="https://github.com/huayu8/JDC" rel="nofollow" target="_blank">GitHub</a></span></div>
     </div>
   </div>
 </div>

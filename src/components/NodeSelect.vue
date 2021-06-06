@@ -90,7 +90,6 @@ export default {
                         id = i
                     }
                 }
-                console.log(this.nodeList, id)
                 this.changeNode(id)
             }
             
