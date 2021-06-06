@@ -1,6 +1,6 @@
 <script>
 const urlList= []
-const baseUrl= "http://127.0.0.1:5701"
+const baseUrl= ""
 const cid= ""
 const nodeName=""
 const loginStatus= false

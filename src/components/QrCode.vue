@@ -11,7 +11,7 @@
             </div>
             <div class="mdui-card-actions">
                 <div style="padding-bottom: 10px">
-                    <button @click="getQrCode" class="mdui-btn mdui-btn-block mdui-ripple mdui-color-indigo">生成二维码</button>
+                    <button v-if="isOk" @click="getQrCode" class="mdui-btn mdui-btn-block mdui-ripple mdui-color-indigo">生成二维码</button>
                 </div>
             </div>
         </div>
@@ -36,7 +36,8 @@ export default {
         }
     },
     props:{
-        tip:String
+        tip:String,
+        isOk:Boolean
     },
     methods:{
         //获取二维码
