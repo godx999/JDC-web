@@ -85,11 +85,12 @@ export default {
                 //开始遍历
                 var Mnum = 0
                 var id = 0
-                for(var i=0;i<tmp;i++){
+                for(var i=0;i<tmp.length;i++){
                     if(tmp[i].allow>Mnum){
                         id = i
                     }
                 }
+                console.log(this.nodeList, id)
                 this.changeNode(id)
             }
             

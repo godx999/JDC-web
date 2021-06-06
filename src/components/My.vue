@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import global from '../components/Common.vue'
 import axios from 'axios'
 import mdui from 'mdui'
 export default {
@@ -55,7 +54,8 @@ export default {
     },
     methods:{
         getInfo(){
-            this.baseUrl= global.baseUrl
+            this.baseUrl= localStorage.getItem("baseUrl")
+            console.log(this.baseUrl)
             var self= this
             this.cid= localStorage.getItem("cid")
             //获取账号信息
